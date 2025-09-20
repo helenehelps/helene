@@ -19,6 +19,15 @@
     "readme.md": "LICENSE"
   },
 
+  // Specify ts sdk (require manual setup).
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Output files readabilities.
+  "editor.wordWrapColumn": 80,
+  "[css]": { "editor.wordWrap": "wordWrapColumn" },
+  "[html]": { "editor.wordWrap": "wordWrapColumn" },
+  "[javascript]": { "editor.wordWrap": "wordWrapColumn" },
+
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": [
     ".next",

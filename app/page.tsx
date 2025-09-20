@@ -1,3 +1,5 @@
+import utils from "@app/utils.module.scss"
+
 export default function () {
-  return <div>Placeholder</div>
+  return <div className={utils.placeholder}>Placeholder</div>
 }
