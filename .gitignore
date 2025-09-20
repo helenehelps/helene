@@ -6,7 +6,8 @@ Desktop.ini
 *.ipr
 *.iws
 
-# Environment variables.
+# Environment variable and database migration.
+.migrate
 .env
 
 # Node & next.

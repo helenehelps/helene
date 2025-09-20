@@ -5,6 +5,7 @@
     "vitest.explorer",
 
     // Configurations.
+    "docker.docker",
     "dotenv.dotenv-vscode",
     "lokalise.i18n-ally",
     "redhat.vscode-yaml",

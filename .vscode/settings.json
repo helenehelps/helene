@@ -25,7 +25,11 @@
     "vitest.config.ts": "vitest.shims.d.ts",
     "tsconfig.json": "tsconfig.tsbuildinfo",
     "package.json": "pnpm-lock.yaml",
+    ".env.development": ".env",
     "readme.md": "LICENSE"
+  },
+  "files.associations": {
+    "docker-compose.yaml": "yaml"
   },
 
   // Locale supports (require recommended extensions).
@@ -55,6 +59,8 @@
   "cSpell.words": [
     "esbenp",
     "esbuild",
+    "healthcheck",
+    "isready",
     "lokalise",
     "oxlint",
     "tamasfe",
