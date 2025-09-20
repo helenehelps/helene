@@ -13,7 +13,11 @@
   // "explorer.fileNesting.enabled": true,
   // "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
+    "*.module.scss": "${capture}.stories.tsx",
+    "*.tsx": "${capture}.module.scss, ${capture}.stories.tsx",
+    "*.ts": "${capture}.test.ts",
     "next.config.ts": "next-env.d.ts",
+    "vitest.config.ts": "vitest.shims.d.ts",
     "tsconfig.json": "tsconfig.tsbuildinfo",
     "package.json": "pnpm-lock.yaml",
     "readme.md": "LICENSE"
@@ -35,5 +39,12 @@
     "node_modules",
     "pnpm-lock.yaml"
   ],
-  "cSpell.words": ["esbenp", "oxlint", "turbopack", "vercel"]
+  "cSpell.words": [
+    "esbenp",
+    "esbuild",
+    "oxlint",
+    "turbopack",
+    "vercel",
+    "vitest"
+  ]
 }
