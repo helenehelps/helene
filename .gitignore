@@ -17,3 +17,6 @@ build
 out
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# Rust.
+target

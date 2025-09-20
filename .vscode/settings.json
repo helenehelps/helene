@@ -2,12 +2,17 @@
   "files.encoding": "utf8",
   "files.eol": "\n",
   "editor.tabSize": 2,
-  "editor.rulers": [80],
+  "editor.rulers": [80, 100],
 
   // Format on save (require recommended extensions).
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": { "source.organizeImports": "always" },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
 
   // File nesting patterns (enable as you wish).
   // "explorer.fileNesting.enabled": true,
@@ -43,12 +48,16 @@
     ".next",
     "next-env.d.ts",
     "node_modules",
-    "pnpm-lock.yaml"
+    "pnpm-lock.yaml",
+    "target",
+    "Cargo.lock"
   ],
   "cSpell.words": [
     "esbenp",
     "esbuild",
+    "lokalise",
     "oxlint",
+    "tamasfe",
     "turbopack",
     "vercel",
     "vitest"

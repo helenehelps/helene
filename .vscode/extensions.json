@@ -1,8 +1,14 @@
 {
   "recommendations": [
+    // Languages and frameworks.
+    "rust-lang.rust-analyzer",
+    "vitest.explorer",
+
     // Configurations.
     "dotenv.dotenv-vscode",
+    "lokalise.i18n-ally",
     "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
 
     // Code qualities.
     "oxc.oxc-vscode",
