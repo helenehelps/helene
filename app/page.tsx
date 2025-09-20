@@ -1,5 +1,7 @@
 import utils from "@app/utils.module.scss"
+import { useTranslations } from "next-intl"
 
 export default function () {
-  return <div className={utils.placeholder}>Placeholder</div>
+  const t = useTranslations("meta")
+  return <div className={utils.placeholder}>locale: {t("name")}</div>
 }

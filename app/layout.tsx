@@ -1,5 +1,6 @@
 import "@app/root.scss"
 import { Metadata } from "next"
+import { NextIntlClientProvider } from "next-intl"
 import { ReactNode } from "react"
 
 export const metadata: Metadata = {
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
 export default function ({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   )
 }

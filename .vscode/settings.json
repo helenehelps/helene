@@ -23,6 +23,12 @@
     "readme.md": "LICENSE"
   },
 
+  // Locale supports (require recommended extensions).
+  "i18n-ally.localesPaths": ["locales"],
+  "json.schemas": [
+    { "fileMatch": ["locales/*.json"], "url": "./app/lang.schema.json" }
+  ],
+
   // Specify ts sdk (require manual setup).
   "typescript.tsdk": "node_modules/typescript/lib",
 
