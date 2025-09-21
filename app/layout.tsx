@@ -1,4 +1,5 @@
 import "@app/root.scss"
+import "@app/theme.scss"
 import { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { ReactNode } from "react"
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html>
+    <html data-theme="system">
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

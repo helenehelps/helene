@@ -1,7 +1,16 @@
+import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/nextjs-vite"
+import "../app/theme.scss"
 import "./global.scss"
 
 const preview: Preview = {
+  decorators: [
+    withThemeByDataAttribute({
+      themes: { system: "system", light: "light", dark: "dark" },
+      defaultTheme: "system",
+      attributeName: "data-theme",
+    }),
+  ],
   parameters: {
     controls: {
       matchers: {
