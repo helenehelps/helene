@@ -1,3 +1,30 @@
+@use "./theme.scss" as theme;
+
+// Theme apply.
+html {
+  &,
+  &[data-theme="system"] {
+    background-color: var(--background);
+    color: var(--foreground);
+
+    @media (prefers-color-scheme: light) {
+      @include theme.light-theme;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      @include theme.dark-theme;
+    }
+  }
+
+  &[data-theme="light"] {
+    @include theme.light-theme;
+  }
+
+  &[data-theme="dark"] {
+    @include theme.dark-theme;
+  }
+}
+
 body {
   margin: 0;
   height: 100vh;
