@@ -64,6 +64,7 @@
     "lokalise",
     "oxlint",
     "pino",
+    "playwright",
     "tamasfe",
     "turbopack",
     "vercel",
