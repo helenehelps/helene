@@ -8,6 +8,7 @@
     "format": "prettier --write .",
     "review": "prettier --check . && oxlint && npm run d:scss && tsc --noEmit",
     "database": "docker compose --env-file .env.development up database -d",
+    "test": "vitest run",
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
