@@ -1,7 +1,7 @@
 import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/nextjs-vite"
-import "../app/theme.scss"
-import "./global.scss"
+import "../app/root.scss"
+import "./decorator.scss"
 
 const preview: Preview = {
   decorators: [

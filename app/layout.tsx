@@ -1,5 +1,4 @@
 import "@app/root.scss"
-import "@app/theme.scss"
 import { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { ReactNode } from "react"

@@ -17,6 +17,7 @@ node_modules
 build
 out
 next-env.d.ts
+next-scss.d.ts
 tsconfig.tsbuildinfo
 
 # Rust.
