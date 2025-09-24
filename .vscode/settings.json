@@ -63,6 +63,7 @@
     "isready",
     "lokalise",
     "oxlint",
+    "pino",
     "tamasfe",
     "turbopack",
     "vercel",

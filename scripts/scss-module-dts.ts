@@ -2,7 +2,10 @@ import { GlobOptionsWithFileTypesUnset, globSync } from "glob"
 import { createWriteStream, writeFileSync } from "node:fs"
 import { dirname, join, relative } from "node:path"
 import { cwd } from "node:process"
+import pino from "pino"
 import { compile } from "sass"
+
+const log = pino({ transport: { target: "pino-pretty" } })
 
 /**
  * 1. It will not resolve comments.
@@ -19,6 +22,7 @@ export function generateCssModuleDeclare(
   for (const alias of Object.keys(aliases)) {
     if (path.startsWith(alias)) path = path.replace(alias, aliases[alias])
   }
+  log.info(`declare css module: ${path}`)
   return `declare module "${path}" { ${content.join("")}}`
 }
 
