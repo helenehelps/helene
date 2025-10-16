@@ -39,5 +39,15 @@
 
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": ["node_modules", "out", "pnpm-lock.yaml"],
-  "cSpell.words": ["consola", "esbenp", "esbuild", "oxlint", "vercel", "vitest"]
+  "cSpell.words": [
+    "consola",
+    "dotenv",
+    "esbenp",
+    "esbuild",
+    "isready",
+    "lokalise",
+    "oxlint",
+    "vercel",
+    "vitest"
+  ]
 }

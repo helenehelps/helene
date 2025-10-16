@@ -1,7 +1,13 @@
 {
   "recommendations": [
+    // Languages and frameworks.
+    "dotenv.dotenv-vscode",
+    "vitest.explorer",
+
     // Configurations.
     "redhat.vscode-yaml",
+    "docker.docker",
+    "lokalise.i18n-ally",
 
     // Code qualities.
     "oxc.oxc-vscode",

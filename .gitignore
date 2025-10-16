@@ -6,6 +6,10 @@ Desktop.ini
 *.ipr
 *.iws
 
+# Environment variable and database migration.
+.migrate
+.env
+
 # Node.
 node_modules
 out
@@ -18,5 +22,6 @@ next-env.d.ts
 next-css.d.ts
 tsconfig.tsbuildinfo
 
+# Storybook.
 *storybook.log
 storybook-static

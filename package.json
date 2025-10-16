@@ -8,13 +8,18 @@
     "format": "prettier --write .",
     "review": "prettier --check . && oxlint && tsx scripts/typecheck.ts",
     "test": "vitest run",
+    "database": "docker compose --env-file .env.development up database -d",
     "dev": "next dev --turbo",
     "build": "tsx scripts/build.ts",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
+    "drizzle-orm": "^0.44.6",
     "next": "15.5.5",
     "next-intl": "4.3.12",
+    "postgres": "^3.4.7",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
@@ -33,6 +38,8 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "chalk": "catalog:dev",
     "consola": "catalog:dev",
+    "dotenv": "catalog:dev",
+    "drizzle-kit": "^0.31.5",
     "glob": "catalog:dev",
     "oxlint": "^1.23.0",
     "playwright": "^1.56.0",
