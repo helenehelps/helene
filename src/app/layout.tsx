@@ -1,4 +1,4 @@
-import "@app/root.scss"
+import "@/app/root.scss"
 import { Metadata } from "next"
 import { ReactNode } from "react"
 

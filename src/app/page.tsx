@@ -1,5 +1,5 @@
 import classes from "@/classes"
-import { center, container } from "@styles/layout.module.scss"
+import { center, container } from "@/styles/layout.module.scss"
 import { useTranslations } from "next-intl"
 
 export default function () {

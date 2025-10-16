@@ -18,14 +18,7 @@
       { "name": "typescript-plugin-css-modules" }
     ],
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@app/*": ["src/app/*"],
-      "@components/*": ["src/components/*"],
-      "@database/*": ["src/database/*"],
-      "@locales/*": ["src/locales/*"],
-      "@styles/*": ["src/styles/*"]
-    }
+    "paths": { "@/*": ["src/*"] }
   },
   "include": [
     "next-css.d.ts",
