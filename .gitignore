@@ -9,3 +9,10 @@ Desktop.ini
 # Node.
 node_modules
 out
+
+# Next.
+.vercel
+.next
+build
+next-env.d.ts
+tsconfig.tsbuildinfo
