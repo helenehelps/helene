@@ -1,7 +1,6 @@
 import { spawn, SpawnOptionsWithoutStdio } from "node:child_process"
-import { relative, resolve } from "node:path"
+import { resolve } from "node:path"
 import { stdout } from "node:process"
-import { compilerOptions } from "../tsconfig.json"
 
 /**
  * Run a shell command, redirect stdout and stderr.
@@ -34,10 +33,3 @@ export function run(
 
 /** Root of current package (workspace). */
 export const root = resolve(import.meta.dirname, "..")
-
-export const aliases = Object.fromEntries(
-  Object.entries(compilerOptions.paths)
-    .map(([k, v]) => [k.replace("/*", ""), v[0].replace("/*", "")])
-    .map(([k, v]) => [k, relative(root, resolve(compilerOptions.baseUrl, v))])
-    .reverse(),
-)

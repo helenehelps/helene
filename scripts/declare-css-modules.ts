@@ -5,7 +5,8 @@ import { SpawnOptionsWithoutStdio } from "node:child_process"
 import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs"
 import { dirname, join, relative } from "node:path"
 import { compile as compileSass } from "sass"
-import { aliases as packageAliases, root, run } from "./common"
+import { root, run } from "./common"
+import { aliasesFromTSConfig } from "./tsconfig-paths"
 
 export function resolveCssModuleCode(file: string): string {
   if (file.endsWith(".module.css")) {
@@ -64,7 +65,7 @@ export async function runWithCssModuleDeclare(
   {
     pattern = defaultPattern,
     outfile = defaultDeclareFile,
-    aliases = packageAliases,
+    aliases = aliasesFromTSConfig(root, "tsconfig.json"),
     ...options
   }: SpawnOptionsWithoutStdio & {
     pattern?: string | string[]
