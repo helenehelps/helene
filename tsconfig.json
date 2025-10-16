@@ -21,7 +21,10 @@
     "paths": {
       "@/*": ["src/*"],
       "@app/*": ["src/app/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@database/*": ["src/database/*"],
+      "@locales/*": ["src/locales/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": [

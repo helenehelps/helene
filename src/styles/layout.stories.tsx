@@ -1,5 +1,5 @@
 import classes from "@/classes"
-import { center, container } from "@components/layout.module.scss"
+import { center, container } from "@/styles/layout.module.scss"
 import { Meta, StoryObj } from "@storybook/nextjs-vite"
 import { expect, within } from "storybook/internal/test"
 

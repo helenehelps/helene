@@ -1,5 +1,5 @@
 import { formats } from "@/lang.request"
-import messages from "@/locales/en.json"
+import messages from "@locales/en.json"
 
 declare module "next-intl" {
   interface AppConfig {
