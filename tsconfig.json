@@ -13,7 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      { "name": "next" },
+      { "name": "typescript-plugin-css-modules" }
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -22,6 +25,7 @@
     }
   },
   "include": [
+    "next-css.d.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "src/**/*.ts",

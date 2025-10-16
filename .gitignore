@@ -15,4 +15,5 @@ out
 .next
 build
 next-env.d.ts
+next-css.d.ts
 tsconfig.tsbuildinfo

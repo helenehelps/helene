@@ -16,10 +16,13 @@
     "*": "${capture}.map",
     "*.js": "${capture}.d.ts",
     "*.ts": "${capture}.test.ts",
-    "next.config.ts": "next-env.d.ts",
+    "next.config.ts": "next-env.d.ts, next-css.d.ts",
     "package.json": "pnpm-lock.yaml",
     "readme.md": "license"
   },
+
+  // Specify the TypeScript SDK to enable css module plugin.
+  "typescript.tsdk": "node_modules/typescript/lib",
 
   // Output bundle visualizations.
   "files.associations": { "*.map": "json" },
@@ -30,5 +33,5 @@
 
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": ["node_modules", "out", "pnpm-lock.yaml"],
-  "cSpell.words": ["esbenp", "oxlint", "vercel"]
+  "cSpell.words": ["consola", "esbenp", "esbuild", "oxlint", "vercel"]
 }

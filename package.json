@@ -7,22 +7,27 @@
     "format": "prettier --write .",
     "review": "prettier --check . && oxlint",
     "dev": "next dev --turbo",
-    "build": "next build --turbo"
+    "build": "tsx scripts/build.run.ts"
   },
   "dependencies": {
-    "next": "catalog:dep",
-    "react": "catalog:dep",
-    "react-dom": "catalog:dep"
+    "next": "^15.5.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
-    "@types/react": "catalog:dev",
-    "@types/react-dom": "catalog:dev",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
     "babel-plugin-react-compiler": "^1.0.0",
+    "chalk": "catalog:dev",
+    "consola": "catalog:dev",
+    "glob": "catalog:dev",
     "oxlint": "^1.23.0",
     "prettier": "^3.6.2",
     "prettier-plugin-sh": "^0.18.0",
-    "sass": "catalog:dev",
-    "typescript": "catalog:dev"
+    "sass": "^1.93.2",
+    "tsx": "catalog:dev",
+    "typescript": "catalog:dev",
+    "typescript-plugin-css-modules": "^5.2.0"
   }
 }
