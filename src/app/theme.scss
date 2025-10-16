@@ -1,0 +1,9 @@
+@mixin light-theme {
+  --foreground: #2c2f30;
+  --background: white;
+}
+
+@mixin dark-theme {
+  --foreground: #cac9c4;
+  --background: #1d1f20;
+}
