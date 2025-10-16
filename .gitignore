@@ -17,3 +17,6 @@ build
 next-env.d.ts
 next-css.d.ts
 tsconfig.tsbuildinfo
+
+*storybook.log
+storybook-static

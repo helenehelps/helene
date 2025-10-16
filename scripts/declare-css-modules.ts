@@ -1,11 +1,11 @@
 import chalk from "chalk"
 import consola from "consola"
 import { glob } from "glob"
-import { readFileSync, writeFileSync } from "node:fs"
-import { dirname, join, relative, resolve } from "node:path"
+import { SpawnOptionsWithoutStdio } from "node:child_process"
+import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs"
+import { dirname, join, relative } from "node:path"
 import { compile as compileSass } from "sass"
-import { compilerOptions } from "../tsconfig.json"
-import { root } from "./utils"
+import { aliases as packageAliases, root, run } from "./common"
 
 export function resolveCssModuleCode(file: string): string {
   if (file.endsWith(".module.css")) {
@@ -49,11 +49,36 @@ export function declareCssModules(
   consola.success(`all css modules declared: ${chalk.dim(outfile)}`)
 }
 
-export const pattern = join(root, "src/**/*.module.scss")
-export const declareFile = join(root, "next-css.d.ts")
-export const aliases = Object.fromEntries(
-  Object.entries(compilerOptions.paths)
-    .map(([k, v]) => [k.replace("/*", ""), v[0].replace("/*", "")])
-    .map(([k, v]) => [k, relative(root, resolve(compilerOptions.baseUrl, v))])
-    .reverse(),
-)
+export function cleanCssModuleDeclare(file: string) {
+  if (existsSync(file)) {
+    consola.warn(`clean existing css module declare file: ${chalk.dim(file)}`)
+    rmSync(file)
+  }
+}
+
+export const defaultPattern = join(root, "src/**/*.module.scss")
+export const defaultDeclareFile = join(root, "next-css.d.ts")
+
+export async function runWithCssModuleDeclare(
+  command: string,
+  {
+    pattern = defaultPattern,
+    outfile = defaultDeclareFile,
+    aliases = packageAliases,
+    ...options
+  }: SpawnOptionsWithoutStdio & {
+    pattern?: string | string[]
+    outfile?: string
+    aliases?: Record<string, string>
+  },
+) {
+  if (existsSync(outfile)) {
+    consola.warn(`override existing css module declare: ${chalk.dim(outfile)}`)
+  }
+  declareCssModules(pattern, outfile, aliases)
+  await run(command, options)
+  if (existsSync(outfile)) {
+    rmSync(outfile)
+    consola.success(`css module declare file removed: ${chalk.dim(outfile)}`)
+  }
+}

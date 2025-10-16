@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write .",
-    "review": "prettier --check . && oxlint",
+    "review": "prettier --check . && oxlint && tsx scripts/typecheck.ts",
+    "test": "vitest run",
     "dev": "next dev --turbo",
-    "build": "tsx scripts/build.run.ts"
+    "build": "tsx scripts/build.ts",
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "next": "^15.5.5",
@@ -15,19 +17,29 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^4.1.1",
+    "@storybook/addon-a11y": "9.1.10",
+    "@storybook/addon-docs": "9.1.10",
+    "@storybook/addon-vitest": "9.1.10",
+    "@storybook/nextjs-vite": "9.1.10",
     "@types/node": "catalog:dev",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
     "babel-plugin-react-compiler": "^1.0.0",
     "chalk": "catalog:dev",
     "consola": "catalog:dev",
     "glob": "catalog:dev",
     "oxlint": "^1.23.0",
+    "playwright": "^1.56.0",
     "prettier": "^3.6.2",
     "prettier-plugin-sh": "^0.18.0",
     "sass": "^1.93.2",
+    "storybook": "9.1.10",
     "tsx": "catalog:dev",
     "typescript": "catalog:dev",
-    "typescript-plugin-css-modules": "^5.2.0"
+    "typescript-plugin-css-modules": "^5.2.0",
+    "vitest": "^3.2.4"
   }
 }
