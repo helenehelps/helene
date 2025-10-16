@@ -26,6 +26,9 @@
 
   // Specify the TypeScript SDK to enable css module plugin.
   "typescript.tsdk": "node_modules/typescript/lib",
+  "json.schemas": [
+    { "fileMatch": ["src/locales/*.json"], "url": "./src/lang.schema.json" }
+  ],
 
   // Output bundle visualizations.
   "files.associations": { "*.map": "json" },

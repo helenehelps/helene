@@ -12,9 +12,10 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
-    "next": "^15.5.5",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "next": "15.5.5",
+    "next-intl": "4.3.12",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",

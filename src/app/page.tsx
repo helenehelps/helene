@@ -1,6 +1,12 @@
 import classes from "@/classes"
 import { center, container } from "@components/layout.module.scss"
+import { useTranslations } from "next-intl"
 
 export default function () {
-  return <div className={classes(container, center)}>home</div>
+  const meta = useTranslations("meta")
+  return (
+    <div className={classes(container, center)}>
+      locale: {meta("name")}({meta("code")})
+    </div>
+  )
 }
