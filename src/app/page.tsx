@@ -3,10 +3,10 @@ import { center, container } from "@/styles/layout.module.scss"
 import { useTranslations } from "next-intl"
 
 export default function () {
-  const meta = useTranslations("meta")
+  const t = useTranslations("meta")
   return (
     <div className={classes(container, center)}>
-      locale: {meta("name")}({meta("code")})
+      locale: {t("name")}({t("code")})
     </div>
   )
 }
