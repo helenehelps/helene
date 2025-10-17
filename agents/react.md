@@ -10,6 +10,7 @@ When coding React:
 4. React compiler is enabled, don't use `memo` unless you have to.
 5. Use scss-module for styling, don't use any other css frameworks.
 6. Don't write non-ui export functions in `tsx` files.
+7. Import `CSSProperties` from `"react"` instead of using `React.CSSProperties`.
 
 ## You must follow those scss module-rules:
 

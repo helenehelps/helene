@@ -6,6 +6,9 @@
 4. Use vitest for testing.
 5. Use storybook for component preview and UI testing.
 6. Use `pnpm` to run commands, don't use other package managers.
+7. All scripts must be executed through `pnpm run <script-name>`.
+8. Never use `npx` directly - use the corresponding `pnpm` command instead.
+9. Storybook files must use `.stories.tsx` extension.
 
 ## How agent guideline works:
 

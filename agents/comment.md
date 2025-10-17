@@ -9,6 +9,14 @@ When coding comments in any file format:
 3. Don't add any comment inside a function, use comment documentations.
 4. All sentences in comments must have a dot at the end.
 5. `@param` and `@returns` descriptions should start with lowercase letter.
+6. Don't add obvious comments that repeat the function name or are self-explanatory.
+
+## When not to add comments:
+
+1. Storybook stories with descriptive names like `Default`, `FastTyping`, `SlowTyping`.
+2. Simple functions where the name clearly describes the behavior.
+3. Self-explanatory code that doesn't need additional explanation.
+4. Test cases with descriptive names that clearly indicate their purpose.
 
 ## Comment style examples:
 

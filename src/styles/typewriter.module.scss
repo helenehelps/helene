@@ -1,0 +1,30 @@
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+
+  animation:
+    typing var(--typewriter-duration, 3s) steps(var(--typewriter-steps, 30))
+      var(--typewriter-delay, 0s) both,
+    fade-in var(--typewriter-fade-duration, 0.5s) ease-in
+      var(--typewriter-delay, 0s) both;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
