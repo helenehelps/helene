@@ -14,20 +14,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "plugins": [
-      { "name": "next" },
-      { "name": "typescript-plugin-css-modules" }
+      // Dev runtime live css-module declaration support.
+      { "name": "typescript-plugin-css-modules" },
+      { "name": "next" }
     ],
+
+    // Aliases must be unique, or generated declare might fail.
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@app/*": ["src/app/*"],
-      "@components/*": ["src/components/*"],
-      "@database/*": ["src/database/*"],
-      "@locales/*": ["src/locales/*"],
-      "@styles/*": ["src/styles/*"]
-    }
+    "paths": { "@/*": ["src/*"] }
   },
   "include": [
+    // Load generated css-module declaration first to override next default.
     "next-css.d.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts",
