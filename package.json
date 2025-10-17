@@ -8,9 +8,9 @@
     "format": "prettier --write .",
     "review": "prettier --check . && oxlint && tsx scripts/typecheck.ts",
     "test": "vitest run",
-    "database": "docker compose --env-file .env.development up database -d",
     "dev": "next dev --turbo",
     "build": "tsx scripts/build.ts",
+    "database": "tsx scripts/database.ts",
     "storybook": "storybook dev -p 6006",
     "drizzle:generate": "drizzle-kit generate",
     "drizzle:migrate": "drizzle-kit migrate"

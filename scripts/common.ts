@@ -20,7 +20,7 @@ export function run(
   options?: SpawnOptionsWithoutStdio,
 ): Promise<number> {
   return new Promise((resolve, reject) => {
-    const p = spawn(command, { shell: true, ...options })
+    const p = spawn(command, { shell: true, cwd: root, ...options })
     p.stdout.on("data", (data) => stdout.write(data))
     p.stderr.on("data", (data) => stdout.write(data))
     p.on("disconnect", () => reject(new Error(`disconnected: ${command}`)))
