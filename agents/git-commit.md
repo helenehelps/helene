@@ -26,7 +26,8 @@
 4. `perf`: improve performance.
 5. `test`: add or modify tests.
 6. `rules`: update agent rules.
-7. `chore`: others.
+7. `merge`: merge branches or resolve conflicts.
+8. `chore`: others.
 
 ## Detailed Description Rules:
 
