@@ -21,12 +21,12 @@ merge(conflict): <source-branch> into <target-branch>
 ```
 merge(conflict): feature-branch into main
 
-1. Keep feature implementation from `feature-branch` in `src/components/Button.tsx`.
-2. Resolve merge markers in `src/utils/api.ts` by combining both implementations.
+1. Keep feature impl from `feature-branch` in `src/components/Button.tsx`.
+2. Resolve merge markers in `src/utils/api.ts` by combining both impls.
 3. Accept incoming changes in `package.json` for dependency updates.
 4. Remove conflict markers from `src/styles/layout.module.scss`.
 
-The resolution preserves the new feature functionality while
+The resolution preserves new feature functionality while
 maintaining compatibility with recent dependency updates.
 ```
 
