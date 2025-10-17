@@ -1,37 +1,33 @@
-# Comment Guidelines
+# Comment Rules
 
-When coding comments in any file format:
+## Rules:
 
-## You must follow those rules:
+1. Comments must be in English.
+2. Keep English clear and concise, grammar not strict.
+3. Use doc comments, not inline comments in functions.
+4. End all sentences with dots.
+5. `@param` and `@returns` descriptions start lowercase.
 
-1. All comments in code must be in English.
-2. Don't insist on strict English grammars, make it clear and concise.
-3. Don't add any comment inside a function, use comment documentations.
-4. All sentences in comments must have a dot at the end.
-5. `@param` and `@returns` descriptions should start with lowercase letter.
-
-## Comment style examples:
+## Example:
 
 ```ts
 /**
- * Brief description shortly in the first line.
+ * Brief description in first line.
  *
- * 1. You may use ordered list to describe details.
- * 2. All sentences must have a dot at the end.
- * 3. There must be at least 3 items in the list, otherwise use plain text.
- * 4. Don't write a single line too long, add line breaks when necessary.
- * 5. Use links like: {@link values} instead of `values`.
- * 6. Wrap keywords with backticks, like: `unknown`, `true`.
+ * 1. Use ordered lists for details.
+ * 2. All sentences end with dots.
+ * 3. Minimum 3 list items, else use plain text.
+ * 4. Break long lines for readability.
+ * 5. Use {@link values} not `values`.
+ * 6. Wrap keywords in backticks: `unknown`, `true`.
  *
- * @param values don't add a "-" before the description.
- * @returns lower the first letter, and also have dot at end.
+ * @param values no "-" before description.
+ * @returns lowercase first letter with dot.
  */
 export function example(...values: unknown[]) { ... }
 
 /**
- * Default exports can also be commented like this.
- *
- * ... (omit the details)
+ * ... (Default exports commented similarly)
  */
 export default function() { ... }
 ```
