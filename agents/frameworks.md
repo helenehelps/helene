@@ -5,6 +5,7 @@
 3. Use scss and scss-module for styling, don't use original css.
 4. Use vitest for testing.
 5. Use storybook for component preview and UI testing.
+6. Use `pnpm` to run commands, don't use other package managers.
 
 ## How agent guideline works:
 
