@@ -1,5 +1,7 @@
 # Framework Guidelines
 
+## Rules:
+
 1. NextJS application using `app` router inside `src` dir.
 2. Use TypeScript as possible, don't use JavaScript.
 3. Use scss and scss-module for styling, don't use original css.
@@ -10,7 +12,7 @@
 8. Never use `npx` directly - use the corresponding `pnpm` command instead.
 9. Storybook files must use `.stories.tsx` extension.
 
-## How agent guideline works:
+## Agent Guidelines:
 
 1. Agent guidelines are inside `agents/**/*.md`.
 2. The `scripts/prepare-agents.ts` script will copy all rules into

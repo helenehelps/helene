@@ -12,6 +12,9 @@ AGENTS.md
 CLAUDE.md
 QWEN.md
 
+# Generated Git commit message.
+.commit.md
+
 # Environment variable and database migration.
 .migrate
 .env
