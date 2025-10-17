@@ -8,6 +8,7 @@ When coding comments in any file format:
 2. Don't insist on strict English grammars, make it clear and concise.
 3. Don't add any comment inside a function, use comment documentations.
 4. All sentences in comments must have a dot at the end.
+5. `@param` and `@returns` descriptions should start with lowercase letter.
 
 ## Comment style examples:
 

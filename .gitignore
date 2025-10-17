@@ -15,7 +15,7 @@ QWEN.md
 # Environment variable and database migration.
 .migrate
 .env
- 
+
 # Node.
 node_modules
 out

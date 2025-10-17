@@ -11,9 +11,9 @@ const dim = (value: string) => chalk.dim(value)
 /**
  * Copy all agent files to target directory.
  *
- * @param agentFiles List of agent file paths.
- * @param targetDir Target directory path.
- * @returns Array of copied file names.
+ * @param agentFiles list of agent file paths.
+ * @param targetDir target directory path.
+ * @returns array of copied file names.
  */
 function copyToRulesDirectory(
   agentFiles: string[],
@@ -47,9 +47,9 @@ function copyToRulesDirectory(
 /**
  * Merge all agent files content and output to target files.
  *
- * @param agentFiles List of agent file paths.
- * @param outputFiles Array of output file names.
- * @returns Merged content string.
+ * @param agentFiles list of agent file paths.
+ * @param outputFiles array of output file names.
+ * @returns merged content string.
  */
 function mergeAndOutputFiles(
   agentFiles: string[],
@@ -92,7 +92,7 @@ function mergeAndOutputFiles(
  * - `targetDirs`: Target directories for copying individual files.
  * - `outputFiles`: Output files for merged content.
  *
- * @param options Configuration object for preparing agents.
+ * @param options configuration object for preparing agents.
  */
 function prepareAgents(options: {
   sourcePattern: string
