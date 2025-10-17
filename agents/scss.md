@@ -40,6 +40,9 @@ $animation-delay: 0s;
 
 ## When to use each:
 
-- **SCSS variables (`$variable`)**: Internal calculations, repeated values within same file
-- **CSS custom properties (`--variable`)**: Theme values, external control, dynamic changes
-- **Fallback values**: Directly in `var(--variable, fallback)` syntax
+- **SCSS variables (`$variable`)**:
+  Internal calculations, repeated values within same file.
+- **CSS custom properties (`--variable`)**:
+  Theme values, external control, dynamic changes.
+- **Fallback values**:
+  Directly in `var(--variable, fallback)` syntax.
