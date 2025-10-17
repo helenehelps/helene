@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "postinstall": "playwright install",
+    "postinstall": "tsx scripts/postinstall.ts",
+    "prepare-agents": "tsx scripts/prepare-agents.ts",
     "format": "prettier --write .",
     "review": "prettier --check . && oxlint && tsx scripts/typecheck.ts",
     "test": "vitest run",
