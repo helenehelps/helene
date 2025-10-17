@@ -1,3 +1,6 @@
+// Those commented settings are just for references.
+// Don't uncomment them in this git-tracked settings.json file.
+// You may enable those settings for your local device globally.
 {
   "files.encoding": "utf8",
   "files.eol": "\n",
@@ -26,6 +29,11 @@
 
   // Specify the TypeScript SDK to enable css module plugin.
   "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Translation files directory (require recommended extensions).
+  // "i18n-ally.displayLanguage": "xx",
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.localesPaths": ["src/locales"],
   "json.schemas": [
     { "fileMatch": ["src/locales/*.json"], "url": "./src/lang.schema.json" }
   ],
