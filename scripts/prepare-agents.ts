@@ -91,13 +91,15 @@ function mergeAndOutputFiles(
  * - `sourcePattern`: Source directory pattern for agent files.
  * - `targetDirs`: Target directories for copying individual files.
  * - `outputFiles`: Output files for merged content.
+ * - `showBox`: Whether to show processing results box.
  *
  * @param options configuration object for preparing agents.
  */
-function prepareAgents(options: {
+export function prepareAgents(options: {
   sourcePattern: string
   targetDirs: string[]
   outputFiles: string[]
+  showBox?: boolean
 }) {
   consola.start("preparing agents files...")
 
@@ -123,16 +125,18 @@ function prepareAgents(options: {
   const mergedContent = mergeAndOutputFiles(agentFiles, options.outputFiles)
 
   consola.success("agents preparation completed!")
-  consola.box({
-    title: "processing results",
-    message: [
-      `found agent files: ${cyanBold(agentFiles.length)}`,
-      `copied to ${cyanBold(options.targetDirs.length)} directories: ` +
-        `${cyanBold(copiedFiles.length)} files`,
-      `generated merged files: ${cyanBold(options.outputFiles.length)} files`,
-      `merged content length: ${cyanBold(mergedContent.length)} chars`,
-    ].join("\n"),
-  })
+  if (options.showBox !== false) {
+    consola.box({
+      title: "processing results",
+      message: [
+        `found agent files: ${cyanBold(agentFiles.length)}`,
+        `copied to ${cyanBold(options.targetDirs.length)} directories: ` +
+          `${cyanBold(copiedFiles.length)} files`,
+        `generated merged files: ${cyanBold(options.outputFiles.length)} files`,
+        `merged content length: ${cyanBold(mergedContent.length)} chars`,
+      ].join("\n"),
+    })
+  }
 }
 
 function main() {
@@ -140,7 +144,10 @@ function main() {
     sourcePattern: "agents/**/*.md",
     targetDirs: [".roo/rules"],
     outputFiles: ["CLAUDE.md", "QWEN.md"],
+    showBox: true,
   })
 }
 
-main()
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main()
+}

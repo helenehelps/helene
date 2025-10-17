@@ -24,7 +24,7 @@
     "next.config.ts": "next-env.d.ts,next-css.d.ts",
     "vitest.config.ts": "vitest.shims.d.ts",
     "package.json": "pnpm-lock.yaml",
-    "readme.md": "license"
+    "readme.md": "license, claude.md, qwen.md"
   },
 
   // Specify the TypeScript SDK to enable css module plugin.
