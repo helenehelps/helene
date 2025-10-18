@@ -18,6 +18,7 @@ When coding SCSS styles:
 12. Keep code clean and concise without redundant declarations.
 13. Use meaningful class names that describe the component's purpose.
 14. Follow BEM methodology for complex component styling when appropriate.
+15. **MANDATORY**: Always use `@` alias for SCSS module imports to ensure TypeScript type declarations are properly generated and applied.
 
 ## SCSS variable and CSS custom property examples:
 

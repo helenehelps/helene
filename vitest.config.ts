@@ -4,7 +4,14 @@ import { defineConfig, defineProject } from "vitest/config"
 
 const root = import.meta.dirname
 
-const storybookProject = defineProject({
+const code = defineProject({
+  test: {
+    name: "code",
+    include: [join(root, "@(scripts|src)/**/*.test.ts")],
+  },
+})
+
+const storybook = defineProject({
   plugins: [storybookTest({ configDir: join(root, ".storybook") })],
   test: {
     name: "storybook",
@@ -19,5 +26,10 @@ const storybookProject = defineProject({
 })
 
 export default defineConfig({
-  test: { projects: [{ extends: true, ...storybookProject }] },
+  test: {
+    projects: [
+      { extends: true, ...storybook },
+      { extends: true, ...code },
+    ],
+  },
 })

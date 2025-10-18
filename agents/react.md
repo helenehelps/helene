@@ -18,6 +18,7 @@ When coding React:
 2. Use named import, don't use default import.
 3. Do add the `.module.scss` extension when `import`.
 4. Use the `classes` function to add multiple classes.
+5. **MANDATORY**: Always use `@` alias for SCSS module imports to ensure TypeScript type declarations are properly generated and applied.
 
 ## Code style examples as guidelines:
 
