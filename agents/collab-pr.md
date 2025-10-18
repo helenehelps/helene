@@ -57,16 +57,17 @@ with smooth transitions.
 ## Agent Guidelines:
 
 1. Generate PR message only when user requests.
-2. Generate commit message after every task completion.
-3. Write to `.commit.md`.
-4. Allow target branch specification.
-5. Default to `main` branch.
-6. Use git commands for diffs.
-7. Base on actual file changes.
-8. Include detailed description.
-9. Use conventional format.
-10. Review changes first.
-11. AI only generates message, user executes commit.
+2. **MANDATORY**: Write PR message to `.message.md` file in project root.
+3. Generate commit message after every task completion.
+4. **MANDATORY**: Write commit message to `.commit.md` file in project root.
+5. Allow target branch specification.
+6. Default to `main` branch.
+7. Use git commands for diffs.
+8. Base on actual file changes.
+9. Include detailed description.
+10. Use conventional format.
+11. Review changes first.
+12. AI only generates message, user executes commit.
 
 ## Git Commands:
 

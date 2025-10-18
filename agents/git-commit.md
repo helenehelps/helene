@@ -80,11 +80,12 @@ The changes ensure consistent commit message formatting.
 
 1. **MANDATORY**: Generate commit message suggestions after EVERY task completion.
 2. **MANDATORY**: Write commit message to `.commit.md` file in project root.
-3. Use `git status` and `git diff` to identify actual file changes.
-4. Base commit message on actual file modifications, not context.
-5. Include detailed description of all changes made.
-6. Use conventional commit format for consistency.
-7. Review git changes before generating commit message.
-8. User can run `pnpm commit:as` to commit using `.commit.md` content.
-9. **FAILURE TO GENERATE COMMIT MESSAGE IS A RULE VIOLATION**.
-10. Commit message generation must be the final step before `attempt_completion`.
+3. **MANDATORY**: Keep all lines under 60 characters for readability.
+4. Use `git status` and `git diff` to identify actual file changes.
+5. Base commit message on actual file modifications, not context.
+6. Include detailed description of all changes made.
+7. Use conventional commit format for consistency.
+8. Review git changes before generating commit message.
+9. User can run `pnpm commit:as` to commit using `.commit.md` content.
+10. **FAILURE TO GENERATE COMMIT MESSAGE IS A RULE VIOLATION**.
+11. Commit message generation must be the final step before `attempt_completion`.
