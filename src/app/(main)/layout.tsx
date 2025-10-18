@@ -1,5 +1,6 @@
 import classes from "@/classes"
 import SidebarContainer from "@/components/sidebar-container"
+import { useTranslations } from "next-intl"
 import { ReactNode } from "react"
 import {
   container,
@@ -22,17 +23,14 @@ import {
  * @returns A layout component with sidebar and content area.
  */
 export default function ({ children }: { children: ReactNode }) {
+  const t = useTranslations("sidebar")
+
   const sidebarContent = (
     <nav className={classes(navigation)}>
       <ul className={classes(menu)}>
         <li className={classes(menuItem)}>
-          <a href="/" className={classes(menuLink)}>
-            Dashboard
-          </a>
-        </li>
-        <li className={classes(menuItem)}>
           <a href="/settings" className={classes(menuLink)}>
-            Settings
+            {t("settings")}
           </a>
         </li>
       </ul>

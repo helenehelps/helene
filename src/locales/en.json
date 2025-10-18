@@ -2,5 +2,8 @@
   "meta": {
     "code": "en",
     "name": "English"
+  },
+  "sidebar": {
+    "settings": "Settings"
   }
 }
