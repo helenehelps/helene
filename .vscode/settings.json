@@ -18,7 +18,8 @@
   "explorer.fileNesting.patterns": {
     "*": "${capture}.map",
     "*.js": "${capture}.d.ts",
-    "*.ts": "${capture}.test.ts,${capture}.stories.tsx,${capture}.module.scss",
+    "*.ts": "${capture}.test.ts",
+    "*.tsx": "${capture}.stories.tsx, ${capture}.module.scss",
     "*.module.scss": "${capture}.stories.tsx",
     "tsconfig.json": "tsconfig.tsbuildinfo",
     "next.config.ts": "next-env.d.ts,next-css.d.ts",
@@ -48,6 +49,7 @@
   // Code spell checker (require recommended extensions).
   "cSpell.ignorePaths": ["node_modules", "out", "pnpm-lock.yaml"],
   "cSpell.words": [
+    "autodocs",
     "consola",
     "dotenv",
     "esbenp",
@@ -55,6 +57,7 @@
     "healthcheck",
     "isready",
     "lokalise",
+    "oneline",
     "oxlint",
     "qwen",
     "vercel",

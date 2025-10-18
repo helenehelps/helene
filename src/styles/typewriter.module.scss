@@ -1,0 +1,128 @@
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+
+  animation:
+    typing var(--typewriter-duration, 3s) steps(var(--typewriter-steps, 30))
+      var(--typewriter-delay, 0s) both,
+    fade-in var(--typewriter-fade-duration, 0.5s) ease-in
+      var(--typewriter-delay, 0s) both;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.lineByLine {
+  position: relative;
+  overflow: hidden;
+  line-height: 1.5;
+
+  & > * {
+    display: block;
+    opacity: 0;
+    animation: lineFadeIn var(--typewriter-duration, 1s) ease-in-out
+      calc(
+        var(--line-index, 0) * var(--line-delay, 0.2s) +
+          var(--typewriter-delay, 0s)
+      )
+      both;
+  }
+
+  @keyframes lineFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.autoLineBreak {
+  position: relative;
+  overflow: hidden;
+  line-height: 1.5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 85%,
+      var(--background, white) 100%
+    );
+    animation: autoReveal var(--typewriter-duration, 2s) ease-in-out
+      var(--typewriter-delay, 0s) both;
+  }
+
+  @keyframes autoReveal {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+.characterReveal {
+  position: relative;
+  overflow: hidden;
+  line-height: 1.5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1ch;
+    background: var(--background, white);
+    animation:
+      cursorBlink 1s infinite,
+      charProgress var(--typewriter-duration, 3s)
+        steps(var(--typewriter-steps, 30)) var(--typewriter-delay, 0s) both;
+  }
+
+  @keyframes cursorBlink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes charProgress {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100%;
+    }
+  }
+}

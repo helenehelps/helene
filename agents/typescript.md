@@ -1,17 +1,15 @@
-# TypeScript Guidelines
+# TypeScript Rules
 
-When coding TypeScript:
+## Rules:
 
-## You must follow those rules:
+1. No names for default export functions.
+2. No `.ts` or `.js` extensions in imports.
+3. Add doc comments for all exported APIs.
+4. Use sync `node:fs` interfaces.
 
-1. Don't add name for default export functions.
-2. Don't add `.ts` or `.js` extension when `import`.
-3. Do add documentation comments for all exported APIs.
-4. Use sync `node:fs` interfaces (readFileSync, writeFileSync, etc.).
+## Import Rules:
 
-## Import rules for different files:
-
-1. Use import aliases in the `src` folder, don't use relative imports.
-2. Use relative import for files outside the `src` folder.
-3. Avoid dynamic import unless you have to.
-4. For node imports, add `node:` prefix.
+1. Use aliases in `src`, no relative imports.
+2. Use relative imports outside `src`.
+3. Avoid dynamic imports unless necessary.
+4. Add `node:` prefix for node imports.
