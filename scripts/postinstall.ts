@@ -1,6 +1,6 @@
 import consola from "consola"
 import { run } from "./common"
-import { prepareAgents } from "./prepare-agents"
+import { prepareAgents } from "./gen-rules"
 
 async function main() {
   consola.start("running postinstall script...")
