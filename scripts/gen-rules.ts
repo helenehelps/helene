@@ -5,6 +5,25 @@ import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs"
 import { basename, resolve } from "node:path"
 import { root } from "./common.js"
 
+/**
+ * Configuration type for preparing agents.
+ */
+export type AgentConfig = {
+  sourcePattern: string
+  targetDirs: readonly string[]
+  outputFiles: readonly string[]
+  showBox?: boolean
+}
+
+/**
+ * Default configuration for preparing agents.
+ */
+export const defaultAgentConfig: AgentConfig = {
+  sourcePattern: "agents/**/*.md",
+  targetDirs: [".roo/rules"],
+  outputFiles: ["CLAUDE.md", "QWEN.md"],
+} as const
+
 const cyanBold = (value: number | string) => chalk.cyan.bold(value)
 const dim = (value: string) => chalk.dim(value)
 
@@ -16,7 +35,7 @@ const dim = (value: string) => chalk.dim(value)
  * @returns array of copied file names.
  */
 export function copyToRulesDirectory(
-  agentFiles: string[],
+  agentFiles: readonly string[],
   targetDir: string,
 ): string[] {
   const targetDirName = basename(targetDir)
@@ -52,8 +71,8 @@ export function copyToRulesDirectory(
  * @returns merged content string.
  */
 export function mergeAndOutputFiles(
-  agentFiles: string[],
-  outputFiles: string[],
+  agentFiles: readonly string[],
+  outputFiles: readonly string[],
 ): string {
   consola.start("merging agent files content...")
 
@@ -95,12 +114,7 @@ export function mergeAndOutputFiles(
  *
  * @param options configuration object for preparing agents.
  */
-export function prepareAgents(options: {
-  sourcePattern: string
-  targetDirs: string[]
-  outputFiles: string[]
-  showBox?: boolean
-}) {
+export function prepareAgents(options: AgentConfig) {
   consola.start("preparing agents files...")
 
   const agentFiles = glob.sync(options.sourcePattern, { cwd: root })
