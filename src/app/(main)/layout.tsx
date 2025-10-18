@@ -1,7 +1,3 @@
-import classes from "@/classes"
-import SidebarContainer from "@/components/sidebar-container"
-import { useTranslations } from "next-intl"
-import { ReactNode } from "react"
 import {
   container,
   main,
@@ -9,7 +5,11 @@ import {
   menuItem,
   menuLink,
   navigation,
-} from "./layout.module.scss"
+} from "@/app/(main)/layout.module.scss"
+import classes from "@/classes"
+import SidebarContainer from "@/components/sidebar-container"
+import { useTranslations } from "next-intl"
+import { ReactNode } from "react"
 
 /**
  * Main layout component with sidebar and content area.
