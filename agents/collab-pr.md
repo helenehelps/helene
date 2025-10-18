@@ -9,6 +9,7 @@
 5. Separate subject from body with blank line.
 6. No period at end of first line.
 7. Prioritize conciseness over strict grammar.
+8. **MANDATORY**: follow language guidelines.
 
 ## Message Format:
 
@@ -57,16 +58,45 @@ with smooth transitions.
 ## Agent Guidelines:
 
 1. Generate PR message only when user requests.
-2. Generate commit message after every task completion.
-3. Write to `.commit.md`.
-4. Allow target branch specification.
-5. Default to `main` branch.
-6. Use git commands for diffs.
-7. Base on actual file changes.
-8. Include detailed description.
-9. Use conventional format.
-10. Review changes first.
-11. AI only generates message, user executes commit.
+2. **MANDATORY**: Write PR message to `.message.md` file in project root.
+3. **MANDATORY**: Write PR message in English first, then append user's language version
+4. **MANDATORY**: Use clear section separator between English and user language versions
+5. Generate commit message after every task completion.
+6. **MANDATORY**: Write commit message to `.commit.md` file in project root.
+7. Allow target branch specification.
+8. Default to `main` branch.
+9. Use git commands for diffs.
+10. Base on actual file changes.
+11. Include detailed description.
+12. Use conventional format.
+13. Review changes first.
+14. AI only generates message, user executes commit.
+
+## Bilingual Format Example:
+
+```
+# feat: add responsive layout component
+
+1. Create `ResponsiveLayout` with mobile-first design.
+2. Add breakpoint utilities.
+3. Update layout styles.
+4. Include Storybook stories.
+
+Supports mobile, tablet, desktop layouts
+with smooth transitions.
+
+---
+
+# feat: 添加响应式布局组件
+
+1. 创建具有移动优先设计的 `ResponsiveLayout`。
+2. 添加断点工具。
+3. 更新布局样式。
+4. 包含 Storybook 故事。
+
+支持移动端、平板端、桌面端布局
+具有平滑过渡效果。
+```
 
 ## Git Commands:
 

@@ -9,6 +9,7 @@
 5. Separate subject from body with blank line.
 6. Do not add period at the end of the first line.
 7. Prioritize conciseness over strict English grammar.
+8. **MANDATORY**: follow language guidelines.
 
 ## Commit Message Format:
 
@@ -80,11 +81,36 @@ The changes ensure consistent commit message formatting.
 
 1. **MANDATORY**: Generate commit message suggestions after EVERY task completion.
 2. **MANDATORY**: Write commit message to `.commit.md` file in project root.
-3. Use `git status` and `git diff` to identify actual file changes.
-4. Base commit message on actual file modifications, not context.
-5. Include detailed description of all changes made.
-6. Use conventional commit format for consistency.
-7. Review git changes before generating commit message.
-8. User can run `pnpm commit:as` to commit using `.commit.md` content.
-9. **FAILURE TO GENERATE COMMIT MESSAGE IS A RULE VIOLATION**.
-10. Commit message generation must be the final step before `attempt_completion`.
+3. **MANDATORY**: Write commit message in English first, then append user's language version
+4. **MANDATORY**: Use clear section separator between English and user language versions
+5. **MANDATORY**: Keep all lines under 60 characters for readability.
+6. Use `git status` and `git diff` to identify actual file changes.
+7. Base commit message on actual file modifications, not conversation context.
+8. Include detailed description of all changes made.
+9. Use conventional commit format for consistency.
+10. Review git changes before generating commit message.
+11. User can run `pnpm commit:as` to commit using `.commit.md` content.
+12. **FAILURE TO GENERATE COMMIT MESSAGE IS A RULE VIOLATION**.
+13. Commit message generation must be the final step before `attempt_completion`.
+
+## Bilingual Format Example:
+
+```
+feat(components): add responsive layout component
+
+1. Create `ResponsiveLayout` with mobile-first design.
+2. Add breakpoint utilities and responsive styles.
+3. Include Storybook stories for testing.
+
+Supports mobile, tablet, and desktop layouts.
+
+---
+
+feat(components): 添加响应式布局组件
+
+1. 创建具有移动优先设计的 `ResponsiveLayout`。
+2. 添加断点工具和响应式样式。
+3. 包含用于测试的 Storybook 故事。
+
+支持移动端、平板端和桌面端布局。
+```
