@@ -57,6 +57,7 @@
     "healthcheck",
     "isready",
     "lokalise",
+    "oneline",
     "oxlint",
     "qwen",
     "vercel",

@@ -16,7 +16,8 @@
     "drizzle:generate": "drizzle-kit generate",
     "drizzle:migrate": "drizzle-kit migrate",
     "commit:as": "git add . && git commit -F .commit.md && rm .commit.md",
-    "commit:clean": "rm -f .commit.md"
+    "commit:clean": "rm -f .commit.md",
+    "message:clean": "rm -f .message.md"
   },
   "dependencies": {
     "drizzle-orm": "^0.44.6",
