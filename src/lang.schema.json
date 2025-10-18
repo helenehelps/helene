@@ -9,6 +9,14 @@
         "code": { "type": "string" },
         "name": { "type": "string" }
       }
+    },
+    "sidebar": {
+      "type": "object",
+      "properties": {
+        "settings": { "type": "string" }
+      },
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

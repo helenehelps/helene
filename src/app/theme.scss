@@ -1,9 +1,31 @@
 @mixin light-theme {
+  // Main colors
   --foreground: #2c2f30;
   --background: white;
+
+  // Sidebar colors
+  --sidebar-background: #f8f9fa;
+  --sidebar-border: #e9ecef;
+
+  // Interactive colors
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --hover-background: #e9ecef;
+  --active-background: #dee2e6;
 }
 
 @mixin dark-theme {
+  // Main colors
   --foreground: #cac9c4;
   --background: #1d1f20;
+
+  // Sidebar colors
+  --sidebar-background: #2d2f30;
+  --sidebar-border: #3d3f40;
+
+  // Interactive colors
+  --primary-color: #4a9eff;
+  --primary-color-hover: #3a7edf;
+  --hover-background: #3d3f40;
+  --active-background: #4d4f50;
 }
