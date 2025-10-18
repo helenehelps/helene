@@ -14,9 +14,16 @@
 
 ```
 <type>(<scope>): <subject>
+<type>: <subject>
 
 <body>
 ```
+
+**Format Rules:**
+
+- Use `type(scope): subject` when scope is present
+- Use `type: subject` when scope is not present
+- Do not use empty parentheses like `type(): subject`
 
 ## Commit Types:
 
@@ -39,19 +46,34 @@
 6. Add periods at the end of all ordered list items and detailed descriptions.
 7. Keep lines under 60 characters for better readability.
 8. Use numbered points first, then add details if needed.
+9. Prioritize conciseness - avoid listing obvious details.
+10. Use abbreviations for common terms when appropriate.
+11. Combine related changes into single points.
 
 ## Example:
+
+**With scope:**
 
 ```
 feat(components): add responsive layout component
 
-1. Create `ResponsiveLayout` component with mobile-first design.
-2. Add breakpoint utilities in `src/utils/breakpoints.ts`.
-3. Update `src/styles/layout.module.scss` with responsive classes.
-4. Include Storybook stories in `src/components/ResponsiveLayout.stories.tsx`.
+1. Create `ResponsiveLayout` with mobile-first design.
+2. Add breakpoint utilities and responsive styles.
+3. Include Storybook stories for testing.
 
-The component supports mobile, tablet, and desktop layouts
-with smooth transitions between breakpoints.
+Supports mobile, tablet, and desktop layouts.
+```
+
+**Without scope:**
+
+```
+rules: update git commit format guidelines
+
+1. Clarify commit message format for cases without scope.
+2. Add explicit rules about empty parentheses usage.
+3. Update examples to demonstrate both formats.
+
+The changes ensure consistent commit message formatting.
 ```
 
 ## Agent Guidelines:
