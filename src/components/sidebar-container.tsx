@@ -3,6 +3,7 @@
 import classes from "@/classes"
 import {
   content,
+  mainContent,
   resizer,
   sidebar,
 } from "@/components/sidebar-container.module.scss"
@@ -10,6 +11,7 @@ import {
   type MouseEvent as ReactMouseEvent,
   type ReactNode,
   useCallback,
+  useEffect,
   useRef,
   useState,
 } from "react"
@@ -73,7 +75,7 @@ export default function ({
   }, [])
 
   // Add global event listeners for drag
-  useState(() => {
+  useEffect(() => {
     if (isDragging) {
       document.addEventListener("mousemove", handleMouseMove)
       document.addEventListener("mouseup", handleMouseUp)
@@ -82,7 +84,7 @@ export default function ({
         document.removeEventListener("mouseup", handleMouseUp)
       }
     }
-  })
+  }, [isDragging, handleMouseMove, handleMouseUp])
 
   const sidebarElement = (
     <div
@@ -99,7 +101,7 @@ export default function ({
     </div>
   )
 
-  const contentElement = <div className={classes(content)}>{children}</div>
+  const contentElement = <div className={classes(mainContent)}>{children}</div>
 
   return (
     <>
