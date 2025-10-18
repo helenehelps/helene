@@ -20,7 +20,8 @@ export function resolveCssModuleCode(file: string): string {
 export function resolveCssModuleClasses(file: string): string[] {
   const code = resolveCssModuleCode(file)
   const classes = code.match(/\.([a-z][a-zA-Z0-9_]*)/g) || []
-  return classes.map((match) => match.slice(1))
+  const uniqueClasses = [...new Set(classes.map((match) => match.slice(1)))]
+  return uniqueClasses
 }
 
 export function declareCssModules(
